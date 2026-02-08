@@ -1,6 +1,19 @@
 const express = require("express");
 const crypto = require("crypto");
 const app = express();
+const express = require("express");
+const cors = require("cors");
+const crypto = require("crypto");
+
+const app = express();
+
+app.use(cors({
+  origin: "*",   // 👈 ab GitHub Pages se allow hoga
+  methods: ["GET", "POST"],
+  allowedHeaders: ["Content-Type"]
+}));
+
+app.use(express.json());
 
 app.use(express.json());
 
